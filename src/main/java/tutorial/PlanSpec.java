@@ -26,20 +26,12 @@ import com.atlassian.bamboo.specs.util.BambooServer;
 @BambooSpec
 public class PlanSpec {
     
-    public Plan plan() {
-        final Plan plan = new Plan(new Project()
-                .oid(new BambooOid(""))
-                .key(new BambooKey("ONE"))
-                .name("onlyone"),
-            "NEWW",
-            new BambooKey("newplan"))
-            .oid(new BambooOid(""))
-            .pluginConfigurations(new ConcurrentBuilds()
-                    .useSystemWideDefault(false))
-            .stages(new Stage("Stage 1")
-                    .jobs(new Job("Clone and install",
-                            new BambooKey("CI"))
-                          }
+   private Plan createPlan() {
+    return new Plan(
+            project(),
+            "new1", "NE")
+            .description("Plan created from (enter repository url of your plan)");
+}
     public PlanPermissions planPermission() {
         final PlanPermissions planPermission = new PlanPermissions(new PlanIdentifier("SAM", "CONN"))
             .permissions(new Permissions()
