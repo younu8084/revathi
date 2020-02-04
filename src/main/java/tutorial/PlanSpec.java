@@ -82,7 +82,7 @@ public class PlanSpec {
     
     public static void main(String... argv) {
         //By default credentials are read from the '.credentials' file.
-        BambooServer bambooServer = new BambooServer("http://18.220.222.179:8085");
+        BambooServer bambooServer = new BambooServer("http://18.220.143.53:8085");
         final PlanSpec planSpec = new PlanSpec();
         
         final Plan plan = planSpec.plan();
